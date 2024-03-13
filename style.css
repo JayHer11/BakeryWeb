@@ -60,7 +60,7 @@ nav a:hover{
     max-width:50%;
 }
 .words{
-    color:black;
+    color: #012f49;
     position:relative;
     display:flex;
     flex-direction:column;
