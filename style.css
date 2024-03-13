@@ -1,5 +1,5 @@
 body{
-    background-color: #fffffe;
+    background-color: bisque;
     color: #ffffff;
 }
 nav ul{
@@ -73,9 +73,39 @@ nav a:hover{
     width:100%;
 }
 .calendar{
+    border-top: #012f49 solid 10px;
     background-color:bisque;
-    color:black;
+    margin-top:100px;
+    margin-bottom:100px;
 }
 table{
+    margin-left:25%;
+    margin-right:25%;
     background-color: #e56e6e;
+    height:500px;
+    width:50%;
+}
+tr{
+    margin:10px;
+}
+td{
+    margin:10px;
+    border: saddlebrown solid 2px;
+}
+h2{
+    display:flex;
+    justify-content:center;
+    font-size: 40px;
+}
+.past{
+    background-color: gray;
+}
+.today{
+    background-color:lightblue;
+}
+.available{
+    background-color: #e56e6e;
+}
+.unavailable{
+    background-color:gray;
 }
