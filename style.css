@@ -72,3 +72,10 @@ nav a:hover{
     justify-content:center;
     width:100%;
 }
+.calendar{
+    background-color:bisque;
+    color:black;
+}
+table{
+    background-color: #e56e6e;
+}
