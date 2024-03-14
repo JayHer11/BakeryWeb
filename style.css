@@ -57,14 +57,16 @@ nav a:hover{
     justify-content: space-around;
     flex-direction:column;
     margin: 10px auto;
-    max-width:50%;
+    max-width:55%;
 }
 .words{
     color: #012f49;
     position:relative;
     display:flex;
     flex-direction:column;
-    max-width:50%;
+    max-width:45%;
+    margin-right:5%;
+    margin-left:5%;
 }
 .bigBox{
     background-color:bisque;
@@ -108,4 +110,7 @@ h2{
 }
 .unavailable{
     background-color:gray;
+}
+.filler-space{
+    height:40px;
 }
