@@ -1,5 +1,5 @@
 body{
-    background-color: bisque;
+    background-color: rgb(186, 205, 176);
     color: #ffffff;
 }
 nav ul{
@@ -11,7 +11,7 @@ nav ul{
 nav li {
     list-style: none;
     min-width: 200px;
-    background-color: rgb(229, 110, 110);
+    background-color: rgb(71, 91, 99);
     color: #ffffff;
     margin: 0;
     flex: 1;
@@ -60,7 +60,11 @@ nav a:hover{
     max-width:55%;
 }
 .words{
-    color: #012f49;
+    border: rgb(71, 91, 99) solid 5px;
+    background: gray;
+    color: #ffffff;
+    padding:10px;
+    text-align:center;
     position:relative;
     display:flex;
     flex-direction:column;
@@ -69,21 +73,21 @@ nav a:hover{
     margin-left:5%;
 }
 .bigBox{
-    background-color:bisque;
+    background-color:rgb(186, 205, 176);
     display: flex;
     justify-content:center;
     width:100%;
 }
 .calendar{
     border-top: #012f49 solid 10px;
-    background-color:bisque;
+    background-color:rgb(186, 205, 176);
     margin-top:100px;
     margin-bottom:100px;
 }
 table{
     margin-left:25%;
     margin-right:25%;
-    background-color: #e56e6e;
+    background-color: rgb(71, 91, 99);
     height:500px;
     width:50%;
 }
@@ -92,7 +96,7 @@ tr{
 }
 td{
     margin:10px;
-    border: saddlebrown solid 2px;
+    border: rgb(46, 44, 47) solid 2px;
 }
 h2{
     display:flex;
@@ -106,7 +110,7 @@ h2{
     background-color:lightblue;
 }
 .available{
-    background-color: #e56e6e;
+    background-color:rgb(186, 205, 176);
 }
 .unavailable{
     background-color:gray;
