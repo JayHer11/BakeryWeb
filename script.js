@@ -1,7 +1,9 @@
+// region GettingDate
 const now = new Date();
 const year = now.getFullYear()
 const month = now.getMonth();
 const day = now.getDay(); // returns a number representing the day of the week, starting with 0 for Sunday
+const day2 = now.getDate();
 const hours = now.getHours();
 const minutes = now.getMinutes();
 let dayOfWeek;
@@ -48,17 +50,39 @@ if(month === 5){
     monthOfYear ="August";
 }if(month === 8){
     monthOfYear ="September";
-}
 }if(month === 9){
     monthOfYear ="October";
 }
-}if(month === 10){
+if(month === 10){
     monthOfYear ="November";
 }
-}if(month === 11){
+if(month === 11){
     monthOfYear ="December";
-}}if(month === 0){
+}
+if(month === 0){
     monthOfYear ="January";
 }
+console.log(`Today is ${dayOfWeek} the ${day2}, ${monthOfYear} ${year} and the time is ${hours}:${minutes}.`);
+//endregion
+//region updatingCalendar
+const currentDate = now.getDate();
 
-console.log(`Today is ${dayOfWeek}, ${monthOfYear} ${year} and the time is ${hours}:${minutes}.`);
+// Update the calendar based on the current date
+window.onload = function() {
+    const calendarTable = document.getElementById('calendarTable');
+    const cells = calendarTable.getElementsByTagName('td');
+
+    for (let i = 0; i < cells.length; i++) {
+        const cellDate = parseInt(cells[i].textContent);
+        if (!isNaN(cellDate)) {
+            if (cellDate < currentDate) {
+                cells[i].className = 'past';
+            } else if (cellDate === currentDate) {
+                cells[i].className = 'today';
+            } else {
+                cells[i].className = 'available';
+            }
+        }
+    }
+};
+//endregion
