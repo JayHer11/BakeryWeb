@@ -118,10 +118,47 @@ h2{
 .filler-space{
     height:40px;
 }
-.ordering-area{
-    display:flex;
+
+/* Orders */
+label {
+    display: block;
+    line-height: 1.25rem;
+    font-weight: 500;
+    font-size: 14px;
+    color: #012f49;
 }
-.order{
-    color:white;
-    background-color: #012f49;
+
+input[type="text"], textarea, select{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    color: #012f49;
+}
+fieldset{
+    border: 1px solid #012f49;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 12px;
+    color: #012f49;
+}
+
+
+fieldset legend{
+    font-size: 14px;
+    color: #ffffff;
+}
+input[type="checkbox"]{
+    display: inline-block;
+}
+
+input[type="checkbox"] ~ label, input[type="radio"] ~ label {
+    display: inline;
+}
+form{
+    display:flex;
+    flex-direction:column;
+    max-width:33%
 }

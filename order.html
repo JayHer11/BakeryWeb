@@ -35,8 +35,106 @@
             </ul>
         </nav>
         <form>
-        <div class="ordering-area">
-        </div>
+            <fieldset>
+                <legend>Customer:</legend>
+                <div class = "row">
+                    <div>
+                        <label for = "firstname">First</label>
+                        <input id = "firstname" name = "first_name" type = "text">
+                    </div>
+                    <div>
+                        <label for = "lastname">Last</label>
+                        <input id = "lastname" name = "last_name" type = "text">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Cake Batter:</legend>
+                <div>
+                    <input type = "radio" id ="chocolate" name = "Batter">
+                    <label for = "chocolate">Chocolate</label>
+                </div>
+                <div>
+                    <input type = "radio" id ="vanilla" name = "Batter">
+                    <label for = "vanilla">Vanilla</label>
+                </div>
+                <div>
+                    <input type = "radio" id ="confetti" name = "Batter">
+                    <label for = "confetti">Confetti</label>
+                </div>
+                <div>
+                    <input type = "radio" id ="red-velvet" name = "Batter">
+                    <label for = "red-velvet">Red Velvet</label>
+                </div>
+                <div>
+                    <input type = "radio" id ="Gluten-free" name = "Batter">
+                    <label for = "Gluten-free">Gluten Free(Vanilla)</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Size:</legend>
+                <div>
+                    <input type = "radio" id ="6in" name = "size">
+                    <label for = "6in">6 inch</label>
+                </div>
+                <div>
+                    <input type = "radio" id ="7in" name = "size">
+                    <label for = "7in">7 inch</label>
+                </div>
+                <div>
+                    <input type = "radio" id ="8in" name = "size">
+                    <label for = "8in">8 inch</label>
+                </div>
+                <div>
+                    <input type = "radio" id ="9in" name = "size">
+                    <label for = "9in">9 inch</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Frosting Colors:</legend>
+                <div class = "row">
+                    <div>
+                        <label for = "PrimaryColor">Primary Color</label>
+                        <input id = "PrimaryColor" name = "primary_color" type = "text">
+                    </div>
+                    <div>
+                        <label for = "SecondaryColor">Secondary Color</label>
+                        <input id = "SecondaryColor" name = "secondary_color" type = "text">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Delivery Type:</legend>
+                <div>
+                    <label for = container>Please Choose One</label>
+                    <select name = "container" id = "container">
+                        <option value ="delivery"> Delivery</option>
+                        <option value ="Pickup"> In Person Pickup</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Special:</legend>
+                <div>
+                    <label for ="SpecialRequests">Special Request</label>
+                    <textarea id ="SpecialRequests" name = "SpecialRequests" rows ="4" cols="10" placeholder="Allergic to peanuts, substitutions, etc"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Delivery Location: </legend>
+                <div class = "row">
+                    <div>
+                        <label for = "address">Address</label>
+                        <input id = "address" name = "address" type = "text">
+                    </div>
+                    <div>
+                        <label for = "areacode">Area Code</label>
+                        <input id = "areacode" name = "areacode" type = "text">
+                    </div>
+                </div>
+            </fieldset>
+            <button type="button" onclick="alert('$14.99')">Calculate Cost</button>
+            <button type="submit">Submit Order</button>
         </form>
     </div>
 </div>
