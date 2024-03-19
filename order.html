@@ -40,11 +40,11 @@
                 <div class = "row">
                     <div>
                         <label for = "firstname">First</label>
-                        <input id = "firstname" name = "first_name" type = "text">
+                        <input id = "firstname" name = "first_name" type = "text" required>
                     </div>
                     <div>
                         <label for = "lastname">Last</label>
-                        <input id = "lastname" name = "last_name" type = "text">
+                        <input id = "lastname" name = "last_name" type = "text" required>
                     </div>
                 </div>
             </fieldset>
@@ -120,6 +120,7 @@
                     <textarea id ="SpecialRequests" name = "SpecialRequests" rows ="4" cols="10" placeholder="Allergic to peanuts, substitutions, etc"></textarea>
                 </div>
             </fieldset>
+            <div class="hidden">
             <fieldset>
                 <legend>Delivery Location: </legend>
                 <div class = "row">
@@ -133,6 +134,7 @@
                     </div>
                 </div>
             </fieldset>
+            </div>
             <button type="button" onclick="alert('$14.99')">Calculate Cost</button>
             <button type="submit">Submit Order</button>
         </form>
