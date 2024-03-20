@@ -1,7 +1,9 @@
+/*region EveryPage */
 body{
     background-color: rgb(186, 205, 176);
     color: #ffffff;
 }
+/* endregion */
 /* region NavBar */
 nav ul{
     display:flex;
