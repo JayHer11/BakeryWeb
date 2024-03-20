@@ -172,6 +172,13 @@ input[type="checkbox"] ~ label, input[type="radio"] ~ label {
 form{
     display:flex;
     flex-direction:column;
-    max-width:33%
+    width:33%
+}
+button{
+    border: 1px solid #012f49;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 12px;
+    color: #012f49;
 }
 /* endregion */
