@@ -86,8 +86,5 @@ window.onload = function() {
     }
 };
 //endregion
-//region hiding
-const checked = document.querySelector('delivery:checked')
-//endregion
 //region ordering
 //endregion
