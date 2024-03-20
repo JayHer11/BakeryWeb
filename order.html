@@ -95,11 +95,11 @@
                 <div class = "row">
                     <div>
                         <label for = "PrimaryColor">Primary Color</label>
-                        <input id = "PrimaryColor" name = "primary_color" type = "text">
+                        <input id = "PrimaryColor" name = "primary_color" type = "text" required>
                     </div>
                     <div>
                         <label for = "SecondaryColor">Secondary Color</label>
-                        <input id = "SecondaryColor" name = "secondary_color" type = "text">
+                        <input id = "SecondaryColor" name = "secondary_color" type = "text" required>
                     </div>
                 </div>
             </fieldset>
@@ -117,24 +117,24 @@
                 <legend>Describe:</legend>
                 <div>
                     <label for ="Description">Describe Your Cake</label>
-                    <textarea id ="Description" name = "Description" rows ="10" cols="10" placeholder="Describe your cake! Additional Questions May Be Required!"></textarea>
+                    <textarea id ="Description" name = "Description" rows ="10" cols="20" placeholder="Describe your cake! Additional questions may be asked via text! For custom cakes please contact us via text or DM!"></textarea>
                 </div>
             </fieldset>
             <div class="hidden">
             <fieldset>
-                <legend>Delivery Location: </legend>
+                <legend>Additional Info: </legend>
                 <div class = "row">
                     <div>
-                        <label for = "address">Address</label>
+                        <label for = "address">Address(Only If Delivering)</label>
                         <input id = "address" name = "address" type = "text">
                     </div>
                     <div>
-                        <label for = "area-code">Area Code</label>
+                        <label for = "area-code">Area Code(Only If Delivering)</label>
                         <input id = "area-code" name = "area-code" type = "text">
                     </div>
                     <div>
                         <label for = "Phone-number">Phone #</label>
-                        <input id = "Phone-number" name = "Phone-number" type = "text">
+                        <input id = "Phone-number" name = "Phone-number" type = "text" required>
                     </div>
                 </div>
             </fieldset>
