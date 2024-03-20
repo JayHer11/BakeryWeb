@@ -84,12 +84,19 @@ nav a:hover{
     margin-top:100px;
     margin-bottom:100px;
 }
-table{
+#calendarTable{
     margin-left:25%;
     margin-right:25%;
     background-color: rgb(71, 91, 99);
     height:500px;
     width:50%;
+}
+#legend{
+    margin-left:33%;
+    margin-right:33%;
+    background-color: rgb(71, 91, 99);
+    height:40px;
+    width:33%;
 }
 tr{
     margin:10px;
