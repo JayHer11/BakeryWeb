@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Ordering</title>
     <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
 <div class="container">
@@ -74,19 +75,19 @@
             <fieldset>
                 <legend>Size:</legend>
                 <div>
-                    <input type = "radio" id ="6in" name = "size">
+                    <input type = "radio" id ="6in" value="10" name = "size">
                     <label for = "6in">6 inch</label>
                 </div>
                 <div>
-                    <input type = "radio" id ="7in" name = "size">
+                    <input type = "radio" id ="7in" value ="20" name = "size">
                     <label for = "7in">7 inch</label>
                 </div>
                 <div>
-                    <input type = "radio" id ="8in" name = "size">
+                    <input type = "radio" id ="8in" value ="30" name = "size">
                     <label for = "8in">8 inch</label>
                 </div>
                 <div>
-                    <input type = "radio" id ="9in" name = "size">
+                    <input type = "radio" id ="9in" value = "40" name = "size">
                     <label for = "9in">9 inch</label>
                 </div>
             </fieldset>
@@ -139,7 +140,7 @@
                 </div>
             </fieldset>
             </div>
-            <button type="button" onclick="alert('$80.00')">Calculate Cost</button>
+            <button type="button" onclick="Calculate()">Calculate Cost</button>
             <button type="submit">Submit Order</button>
         </form>
     </div>

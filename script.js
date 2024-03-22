@@ -87,4 +87,27 @@ window.onload = function() {
 };
 //endregion
 //region ordering
+function Calculate() {
+    const base = 60;
+    const Six = document.getElementById("6in option:checked");
+    const Seven = document.getElementById("7in option:checked");
+    const Eight = document.getElementById("8in option:checked");
+    const Nine = document.getElementById("9in option:checked");
+
+    let size;
+    if(Six === true){
+        size = document.getElementById("6in").value;
+    }
+    if(Seven === true){
+        size = document.getElementById("7in").value;
+    }
+    if(Eight === true){
+        size = document.getElementById("8in").value;
+    }
+    if(Nine === true){
+        size = document.getElementById("9in").value;
+    }
+    let price = base + size;
+console.log(`${[price]}`)
+}
 //endregion
