@@ -87,52 +87,77 @@ window.onload = function() {
 };
 //endregion
 //region ordering
+let batterType; // Variable to hold selected batter type
+let cakeSize; // Variable to hold selected cake size
+let primaryColor; // Variable to hold primary frosting color
+let secondaryColor; // Variable to hold secondary frosting color
+let deliveryType; // Variable to hold delivery type
+let totalCost; // Variable to hold total cost
+
 function Calculate() {
     // Get selected batter type
-    const batter = document.querySelector('input[name="Batter"]:checked').value;
+    batterType = document.querySelector('input[name="Batter"]:checked').value;
 
     // Get selected size
-    const size = parseInt(document.querySelector('input[name="size"]:checked').value);
+    cakeSize = parseInt(document.querySelector('input[name="size"]:checked').value);
 
     // Calculate base cost based on size
-    let baseCost = size * 10;
+    let baseCost = cakeSize * 10;
 
     // Additional cost for gluten-free batter
-    if (batter === "Gluten-free") {
+    if (batterType === "Gluten-free") {
         baseCost += 5;
     }
 
     // Get primary and secondary frosting colors
-    const primaryColor = document.getElementById("PrimaryColor").value;
-    const secondaryColor = document.getElementById("SecondaryColor").value;
+    primaryColor = document.getElementById("PrimaryColor").value;
+    secondaryColor = document.getElementById("SecondaryColor").value;
 
     // Additional cost for extra frosting colors
-    let frostingCost = 5; //frosting cost
+    let frostingCost = 5; // Base frosting cost
     if (secondaryColor !== "") {
         frostingCost += 5; // Assuming additional $5 for each additional frosting color
     }
 
     // Get delivery type
-    let deliveryType = document.getElementById("container").value;
+    deliveryType = document.getElementById("container").value;
 
     // Additional cost for delivery
     let deliveryCost = 0; // Initialize delivery cost
     if (deliveryType === "delivery") {
-        deliveryCost += 30; // Assuming $10 delivery fee
+        deliveryCost += 30; // Assuming $30 delivery fee
     }
 
     // Calculate total cost
-    let totalCost = baseCost + frostingCost + deliveryCost;
+    totalCost = baseCost + frostingCost + deliveryCost;
     // Display the total cost to the user
     alert("Total Cost: $" + totalCost);
 }
-function CreateReceipt(){
+
+function CreateReceipt() {
+    let batter;
+    if(batterType.value === 1){
+        batter = "Chocolate"
+    }
+    else if(batterType.value === 2) {
+        batter = "Vanilla"
+    }
+    else if(batterType.value === 3){
+        batter = "Confetti"
+    }
+    else if(batterType.value === 4){
+        batter = "Red-Velvet"
+    }
+    else if(batterType.value === 5){
+        batter = "Gluten Free Vanilla"
+    }
+
     const outputContainer = document.querySelector('.content');
     // Create a new paragraph element
-    const full = document.createElement('p');
-    // Set its text content
-    full.textContent = `Hello ${first} ${last}! Your order is a ${size} ${batter} cake, with ${PrimaryColor} and ${SecondaryColor} frosting. It will be delivered to ${address} and will cost ${totalCost}. `;
+    const receiptParagraph = document.createElement('p');
+    // Set its text content using the variables from Calculate() function
+    receiptParagraph.textContent = `Your order is a ${cakeSize} ${batter} cake, with ${primaryColor} and ${secondaryColor} frosting. It will be received via ${deliveryType} and will cost $${totalCost}.`;
     // Append it to the output container
-    outputContainer.appendChild(full);
+    outputContainer.appendChild(receiptParagraph);
 }
 //endregion
