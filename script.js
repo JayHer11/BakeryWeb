@@ -87,27 +87,22 @@ window.onload = function() {
 };
 //endregion
 //region ordering
-function Calculate() {
-    const base = 60;
-    const Six = document.getElementById("6in option:checked");
-    const Seven = document.getElementById("7in option:checked");
-    const Eight = document.getElementById("8in option:checked");
-    const Nine = document.getElementById("9in option:checked");
+const firstName = document.getElementById('firstname');
+const lastName = document.getElementById('lastname');
 
-    let size;
-    if(Six === true){
-        size = document.getElementById("6in").value;
-    }
-    if(Seven === true){
-        size = document.getElementById("7in").value;
-    }
-    if(Eight === true){
-        size = document.getElementById("8in").value;
-    }
-    if(Nine === true){
-        size = document.getElementById("9in").value;
-    }
-    let price = base + size;
-console.log(`${[price]}`)
-}
+
+const calculateButton = document.querySelector('[name="submit"]');
+const outputContainer = document.querySelector('.content'); // select an appropriate container
+
+calculateButton.addEventListener('click', function(e) {
+    let first = firstName.value;
+    let last = lastName.value;
+
+    // Create a new paragraph element
+    const full = document.createElement('p');
+    // Set its text content
+    full.textContent = `Hello ${first} ${last}!`;
+    // Append it to the output container
+    outputContainer.appendChild(full);
+});
 //endregion
