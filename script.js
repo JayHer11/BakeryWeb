@@ -123,8 +123,16 @@ function Calculate() {
 
     // Calculate total cost
     let totalCost = baseCost + frostingCost + deliveryCost;
-
     // Display the total cost to the user
     alert("Total Cost: $" + totalCost);
+}
+function CreateReceipt(){
+    const outputContainer = document.querySelector('.content');
+    // Create a new paragraph element
+    const full = document.createElement('p');
+    // Set its text content
+    full.textContent = `Hello ${first} ${last}! Your order is a ${size} ${batter} cake, with ${PrimaryColor} and ${SecondaryColor} frosting. It will be delivered to ${address} and will cost ${totalCost}. `;
+    // Append it to the output container
+    outputContainer.appendChild(full);
 }
 //endregion
