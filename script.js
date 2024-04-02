@@ -87,22 +87,5 @@ window.onload = function() {
 };
 //endregion
 //region ordering
-const firstName = document.getElementById('firstname');
-const lastName = document.getElementById('lastname');
 
-
-const calculateButton = document.querySelector('[name="submit"]');
-const outputContainer = document.querySelector('.content'); // select an appropriate container
-
-calculateButton.addEventListener('click', function(e) {
-    let first = firstName.value;
-    let last = lastName.value;
-
-    // Create a new paragraph element
-    const full = document.createElement('p');
-    // Set its text content
-    full.textContent = `Hello ${first} ${last}!`;
-    // Append it to the output container
-    outputContainer.appendChild(full);
-});
 //endregion
