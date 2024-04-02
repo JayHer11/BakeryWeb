@@ -87,5 +87,44 @@ window.onload = function() {
 };
 //endregion
 //region ordering
+function Calculate() {
+    // Get selected batter type
+    const batter = document.querySelector('input[name="Batter"]:checked').value;
 
+    // Get selected size
+    const size = parseInt(document.querySelector('input[name="size"]:checked').value);
+
+    // Calculate base cost based on size
+    let baseCost = size * 10;
+
+    // Additional cost for gluten-free batter
+    if (batter === "Gluten-free") {
+        baseCost += 5;
+    }
+
+    // Get primary and secondary frosting colors
+    const primaryColor = document.getElementById("PrimaryColor").value;
+    const secondaryColor = document.getElementById("SecondaryColor").value;
+
+    // Additional cost for extra frosting colors
+    let frostingCost = 5; //frosting cost
+    if (secondaryColor !== "") {
+        frostingCost += 5; // Assuming additional $5 for each additional frosting color
+    }
+
+    // Get delivery type
+    let deliveryType = document.getElementById("container").value;
+
+    // Additional cost for delivery
+    let deliveryCost = 0; // Initialize delivery cost
+    if (deliveryType === "delivery") {
+        deliveryCost += 30; // Assuming $10 delivery fee
+    }
+
+    // Calculate total cost
+    let totalCost = baseCost + frostingCost + deliveryCost;
+
+    // Display the total cost to the user
+    alert("Total Cost: $" + totalCost);
+}
 //endregion
